@@ -35,7 +35,10 @@ jobs:
       
     - name: Coverage
       id: jacoco
-      uses: madrapps/jacoco-report@v1.3
+      uses: madrapps/jacoco-report@v1.6.1
       with:
         paths: ${{ github.workspace }}/BirimTestOrnek1/target/site/jacoco/jacoco.xml
         token: ${{ secrets.GITHUB_TOKEN }}
+        min-coverage-overfall: 40
+        min-coverage-changed-files: 60
+
